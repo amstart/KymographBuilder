@@ -242,7 +242,7 @@ public class KymographCreator {
         this.projectedKymograph.setAxis(timAxis, 1);
 
         // I don't understand everything here (mostly the type stuff) but it works...
-        UnaryComputerOp maxOp = (UnaryComputerOp) opService.op(net.imagej.ops.Ops.Stats.Max.class,
+        UnaryComputerOp maxOp = (UnaryComputerOp) opService.op(net.imagej.ops.Ops.Stats.Sum.class,
                 this.kymograph.getImgPlus().getImg());
 
         opService.transform().project(this.projectedKymograph.getImgPlus().getImg(),
